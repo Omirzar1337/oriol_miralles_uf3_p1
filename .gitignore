@@ -1,0 +1,9 @@
+/vendor
+/.fleet
+/.idea
+/.vscode
+/node_modules
+/storage/*
+/storage/app/public
+/storage/logs/*
+/bootstrap/cache/*
