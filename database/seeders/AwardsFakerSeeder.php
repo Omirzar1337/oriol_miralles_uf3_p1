@@ -12,18 +12,9 @@ class AwardsFakerSeeder extends Seeder
     {
         $faker = Faker::create();
 
-
-        $actorIds = range(3, 10);
-
-
-        $actorsCount = $faker->numberBetween(1, 3);
-        $selectedActorIds = $faker->randomElements($actorIds, $actorsCount);
-
-        foreach ($selectedActorIds as $actorId) {
+        foreach (range(1, 10) as $index) {
             DB::table('awards')->insert([
                 'name' => $faker->name,
-                'awardedOn' => $faker->date,
-                'actor_id' => $actorId,
                 "created_at" => now()->setTimezone("Europe/Madrid"),
             ]);
         }
