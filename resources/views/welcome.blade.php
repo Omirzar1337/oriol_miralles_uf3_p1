@@ -56,6 +56,26 @@
 
         <button type="submit">Register Film</button>
     </form>
+
+    <h1 class="mt-4">Lista de Actores</h1>
+    <ul>
+        <li><a href=/actorout/listactors>Actores</a></li>
+        <li><a href=/actorout/countactors>Contador de actores</a></li>
+        <div align="center">
+            <h3>Buscar Actores por décadas</h3>
+            <form action="{{ route('listActorsByDecade')}}" method="GET">
+                <select name="decada" id="decada">
+                    <option value="1970">1970s</option>
+                    <option value="1980">1980s</option>
+                    <option value="1990">1990s</option>
+                    <option value="2000">2000s</option>
+                    <option value="2010">2010s</option>
+                    <option value="2020">2020s</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+
+    </ul>
     <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
