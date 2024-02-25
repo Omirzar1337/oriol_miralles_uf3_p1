@@ -29,9 +29,11 @@
 
     <h1 class="mt-4">Lista de Peliculas</h1>
     <ul>
-        <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
-        <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
-        <li><a href=/filmout/films>Pelis</a></li>
+        <li class="mr-4"><a href="/filmout/oldFilms" class="hover:underline">Películas antiguas</a></li>
+        <li class="mr-4"><a href="/filmout/newFilms" class="hover:underline">Películas nuevas</a></li>
+        <li class="mr-4"><a href="/filmout/films" class="hover:underline">Películas</a></li>
+        <li class="mr-4"><a href="/filmout/countFilms" class="hover:underline">Contador de películas</a></li>
+
     </ul>
 
     <form action="{{ route('createFilm') }}" method="post">
@@ -53,6 +55,9 @@
 
         <label for="url_image">URL Image:</label>
         <input type="text" id="url_image" name="url_image" required><br><br>
+
+        <label for="insert_to_db">Insert into Database:</label>
+        <input type="checkbox" id="insert_to_db" name="insert_to_db" value="true"><br><br>
 
         <button type="submit">Register Film</button>
     </form>

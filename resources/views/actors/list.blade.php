@@ -1,9 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<div align="center">
-    <h1>{{ $title }}</h1>
-</div>
 @if(empty($actors))
 <p>No se han encontrado actores</p>
 @else

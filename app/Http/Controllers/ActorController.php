@@ -44,17 +44,14 @@ class ActorController extends Controller
         // Return the retrieved actors
         return view('actors.count', ['count' => $numOfActors]);
     }
-    public function deleteActor($id)
+    public function deleteActors($id)
     {
-        // Encontrar al actor por su ID
-        $actor = DB::table("actors")->where('id', $id)->first();
+        $affected = DB::table('actors')->where('id', $id)->delete();
 
-        if ($actor) {
-            // Eliminar el actor
-            DB::table("actors")->where('id', $id)->delete();
-            return response()->json(['acción' => 'delete', 'status' => 'true']);
+        if ($affected) {
+            return response()->json(['action' => 'delete', 'status' => true]);
         } else {
-            return response()->json(['acción' => 'delete', 'status' => 'false']);
+            return response()->json(['action' => 'delete', 'status' => false]);
         }
     }
 }
